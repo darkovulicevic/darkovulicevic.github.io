@@ -1,0 +1,561 @@
+<div class="flex h-screen">
+    <!-- Left Column (Fixed Top and Bottom, No Scrollable Section) -->
+    <div
+        class="w-full sm:w-1/2 flex flex-col justify-between h-full items-start bg-[#0A192F] text-slate-200 pt-20 pb-20"
+    >
+        <!-- Top Fixed Section -->
+        <div class="px-4 sm:px-0 w-full flex justify-center">
+            <div class="text-left w-full max-w-[90%] sm:max-w-[45%]">
+                <h1
+                    class="text-3xl sm:text-4xl font-medium tracking-tight text-slate-200 sm:text-5xl"
+                >
+                    Darko Vulicevic
+                </h1>
+                <h2
+                    class="mt-3 text-lg sm:text-xl font-medium tracking-tight text-slate-200"
+                >
+                    Software Developer
+                </h2>
+                <div
+                    class="mt-4 text-sm sm:text-base max-w-xs sm:max-w-sm leading-normal text-[#57688F]"
+                >
+                    Creating accessible, pixel-perfect web & desktop apps with
+                    seamless user experiences.
+                </div>
+                <!-- Integrated Nav Below Text -->
+                <nav
+                    class="nav hidden sm:block mt-8"
+                    aria-label="In-page jump links"
+                >
+                    <ul class="w-max">
+                        <li>
+                            <a
+                                class="group flex items-center py-3 active"
+                                href="#about"
+                            >
+                                <span
+                                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                                ></span>
+                                <span
+                                    class="nav-text text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+                                    >About</span
+                                >
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="group flex items-center py-3"
+                                href="#experience"
+                            >
+                                <span
+                                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                                ></span>
+                                <span
+                                    class="nav-text text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+                                    >Experience</span
+                                >
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="group flex items-center py-3"
+                                href="#projects"
+                            >
+                                <span
+                                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                                ></span>
+                                <span
+                                    class="nav-text text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+                                    >Projects</span
+                                >
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Bottom Fixed Section with Icons -->
+        <div class="p-4 sm:p-6 w-full flex justify-center">
+            <div class="text-left w-full max-w-[90%] sm:max-w-[45%] space-y-4">
+                <div class="flex space-x-4">
+                    <a
+                        href="https://github.com/darkovulicevic"
+                        target="_blank"
+                        class="text-[#57688F] hover:text-slate-200"
+                    >
+                        <i class="fab fa-github text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/darko-vulicevic/"
+                        target="_blank"
+                        class="text-[#57688F] hover:text-slate-200"
+                    >
+                        <i class="fab fa-linkedin text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a
+                        href="https://instagram.com/darko.vulicevic"
+                        target="_blank"
+                        class="text-[#57688F] hover:text-slate-200"
+                    >
+                        <i class="fab fa-instagram text-2xl sm:text-3xl"></i>
+                    </a>
+                    <a
+                        href="https://twitter.com"
+                        target="_blank"
+                        class="text-[#57688F] hover:text-slate-200"
+                    >
+                        <i class="fab fa-twitter text-2xl sm:text-3xl"></i>
+                    </a>
+                </div>
+                <div class="text-[#57688F] text-sm sm:text-base">
+                    © Darko Vulicevic. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column (Scrollable) -->
+    <div
+        class="w-1/2 bg-[#0A192F] p-4 overflow-y-auto text-left pt-20 pb-20 max-w-full"
+    >
+        <div
+            class="about mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-[#57688F]"
+        >
+            <div id="about" class="space-y-4 max-w-[65%]">
+                Experienced JavaScript developer with a proven track record of
+                over four years, specializing in the creation and enhancement of
+                both desktop and web applications using JavaScript, with a
+                particular focus on the Angular framework. Dedicated and
+                responsible professional, I bring a strong work ethic, attention
+                to detail, and a collaborative mindset to every project. My
+                inherent curiosity propels me to stay informed about industry
+                trends and adopt innovative solutions.
+            </div>
+        </div>
+
+        <div id="experience" class="work max-w-[65%]">
+            <ol>
+                <li class="mb-12">
+                    <div
+                        class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+                    >
+                        <div
+                            class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+                        ></div>
+                        <header
+                            class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+                        >
+                            Dec 2020 – May 2021
+                        </header>
+                        <div class="z-10 sm:col-span-6">
+                            <h3 class="font-medium leading-snug text-slate-200">
+                                <div>
+                                    <a
+                                        class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                                    >
+                                        <span
+                                            class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                                        ></span>
+                                        <span>
+                                            JavaScript Developer ·
+                                            <span class="inline-block"
+                                                >Enreach Labs
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </h3>
+                            <p
+                                class="mt-2 text-sm leading-normal text-slate-200"
+                            >
+                                Contributed to the development of QBOARD, a web
+                                application in Angular for the support team to
+                                monitor busy and over-occupied lines. The
+                                project featured a refreshed UI based on the
+                                functionality of an older app and improved team
+                                efficiency and response times through enhanced
+                                usability. Technologies: JavaScript, Angular,
+                                Angular Material, HTML, SCSS, Git, Bitbucket,
+                                Jira and Confluence.
+                            </p>
+                            <ul
+                                class="mt-2 flex flex-wrap"
+                                aria-label="Technologies used"
+                            >
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        JavaScript
+                                    </div>
+                                </li>
+
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Angular
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Angular Material
+                                    </div>
+                                </li>
+
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        HTML &amp; SCSS
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Git
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Bitbucket
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Jira
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Confluence
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mb-12">
+                    <div
+                        class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+                    >
+                        <div
+                            class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+                        ></div>
+
+                        <header
+                            class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+                        >
+                            May 2021 – Dec 2022
+                        </header>
+
+                        <div class="z-10 sm:col-span-6">
+                            <h3 class="font-medium leading-snug text-slate-200">
+                                <a
+                                    class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                                >
+                                    <span
+                                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                                    ></span>
+                                    <span>
+                                        JavaScript Developer ·
+                                        <span class="inline-block">
+                                            Enreach Labs
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                    clip-rule="evenodd"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </a>
+                            </h3>
+
+                            <p
+                                class="mt-2 text-sm leading-normal text-slate-200"
+                            >
+                                Contributed to the development of Unified
+                                Desktop and Web Client, a real-time chat and
+                                call application built with Angular, focusing on
+                                delivering a seamless user experience across
+                                desktop and web platforms. Utilized and
+                                maintained a custom component and brand library
+                                for the Unified Client to ensure consistency and
+                                quality across applications. Continued to work
+                                on QBOARD, enhancing functionalities and
+                                developing new features to improve performance,
+                                maintain the application, and identify various
+                                bugs. Contributed to the development of the
+                                Infinity JS Connection Library, Google JS
+                                Connection Library, Microsoft JS Connection
+                                Library, and Chat JS Library(Chat Library for
+                                Infinity backend) designed to connect to
+                                Infinity, Google, and Microsoft while utilizing
+                                various backend features. Each feature is
+                                represented by a single feature object, with
+                                helpful sub-objects created in certain cases to
+                                represent more complex items, such as soft phone
+                                calls or queues.
+                            </p>
+
+                            <ul
+                                class="mt-2 flex flex-wrap"
+                                aria-label="Technologies used"
+                            >
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        JavaScript
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        TypeScript
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Node.js
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Electron
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Angular
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Angular Material
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        HTML &amp; SCSS
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Git
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Bitbucket
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Jira
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Confluence
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mb-12">
+                    <div
+                        class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+                    >
+                        <div
+                            class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+                        ></div>
+                        <header
+                            class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+                        >
+                            Dec 2022 – Jan 2023
+                        </header>
+                        <div class="z-10 sm:col-span-6">
+                            <h3 class="font-medium leading-snug text-slate-200">
+                                <div>
+                                    <a
+                                        class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                                    >
+                                        <span
+                                            class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                                        ></span>
+                                        <span>
+                                            JavaScript Developer ·
+                                            <span class="inline-block"
+                                                >Enreach Labs
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </h3>
+                            <p
+                                class="mt-2 text-sm leading-normal text-slate-200"
+                            >
+                                Contributed to the migration of Enreach Contact
+                                (formerly Unified Desktop and Web Client) and
+                                the QBOARD web app to a new backend system,
+                                Grid, aimed at enhancing scalability and overall
+                                performance. The migration improved the backend
+                                infrastructure, ensuring better support for both
+                                current and future needs.
+                            </p>
+                            <ul
+                                class="mt-2 flex flex-wrap"
+                                aria-label="Technologies used"
+                            >
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        JavaScript
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        TypeScript
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Node.js
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Electron
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Angular
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Angular Material
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        HTML & SCSS
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Git
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Bitbucket
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Jira
+                                    </div>
+                                </li>
+                                <li class="mr-1.5 mt-2">
+                                    <div
+                                        class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+                                    >
+                                        Confluence
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
