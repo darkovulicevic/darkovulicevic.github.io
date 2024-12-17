@@ -1,0 +1,11 @@
+<div id="experience" class="work max-w-[65%]">
+    <ol>
+        <app-card
+            *ngFor="let card of ui.cards"
+            date="{{card.date}}"
+            pos="{{card.pos}}"
+            desc="{{card.desc}}"
+            [skills]="card.skills"
+        ></app-card>
+    </ol>
+</div>
