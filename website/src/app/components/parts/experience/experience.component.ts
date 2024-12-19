@@ -16,6 +16,9 @@ export class ExperienceComponent {
                 desc: 'Actively contributing to the Reporting Portal project — a React(v19) web application that offers tools for managing and visualizing reports and statistics.',
                 skills: [
                     {
+                        name: 'JavaScript'
+                    },
+                    {
                         name: 'TypeScript'
                     },
                     {
@@ -97,6 +100,9 @@ export class ExperienceComponent {
                         name: 'Git'
                     },
                     {
+                        name: 'npm'
+                    },
+                    {
                         name: 'Bitbucket'
                     },
                     {
@@ -134,6 +140,9 @@ export class ExperienceComponent {
                         name: 'Git'
                     },
                     {
+                        name: 'npm'
+                    },
+                    {
                         name: 'Bitbucket'
                     },
                     {
@@ -163,6 +172,9 @@ export class ExperienceComponent {
                     },
                     {
                         name: 'Git'
+                    },
+                    {
+                        name: 'npm'
                     },
                     {
                         name: 'Bitbucket'
