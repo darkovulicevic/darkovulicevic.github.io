@@ -1,11 +1,6 @@
 <div class="work max-w-[80%] mx-auto px-4">
     <ol>
-        <app-card
-            *ngFor="let card of ui.cards"
-            date="{{ card.date }}"
-            pos="{{ card.pos }}"
-            desc="{{ card.desc }}"
-            [skills]="card.skills"
-        ></app-card>
+        <app-card *ngFor="let card of ui.cards" date="{{ card.date }}" pos="{{ card.pos }}" desc="{{ card.desc }}"
+            [skills]="card.skills"></app-card>
     </ol>
 </div>
