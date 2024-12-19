@@ -1,17 +1,13 @@
 <div class="flex h-screen flex-wrap lg:flex-nowrap">
     <!-- Left Column (Fixed Top and Bottom, No Scrollable Section) -->
     <div
-        class="w-full lg:w-1/2 flex flex-col justify-between h-full items-start bg-[#0A192F] text-slate-200 pt-20 pb-20"
-    >
+        class="w-full lg:w-1/2 flex flex-col justify-between h-full items-start bg-[#0A192F] text-slate-200 pt-20 pb-20">
         <!-- Top Fixed Section -->
         <app-me class="px-4 sm:px-0 w-full flex justify-center"></app-me>
 
         <!-- Bottom Fixed Section with Icons -->
         <app-copy class="p-4 sm:p-6 w-full flex justify-center"></app-copy>
     </div>
-
     <!-- Right Column (Scrollable) -->
-    <app-info
-        class="w-full lg:w-1/2 bg-[#0A192F] p-4 overflow-y-auto text-left pt-20 pb-20 max-w-full"
-    ></app-info>
+    <app-info class="w-full lg:w-1/2 bg-[#0A192F] p-4 overflow-y-auto text-left pt-20 pb-20 max-w-full"></app-info>
 </div>

@@ -1,0 +1,21 @@
+:host {
+    scrollbar-width: thin;
+    scrollbar-color: #1e293b #0A192F;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A192F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}

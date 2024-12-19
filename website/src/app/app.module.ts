@@ -10,23 +10,24 @@ import { AboutComponent } from './components/parts/about/about.component';
 import { ExperienceComponent } from './components/parts/experience/experience.component';
 import { CardComponent } from './components/parts/card/card.component';
 import { InfoComponent } from './components/parts/info/info.component';
+import { UtilsService } from './services/utils.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LayoutComponent,
-    NavComponent,
-    MeComponent,
-    CopyComponent,
-    AboutComponent,
-    ExperienceComponent,
-    CardComponent,
-    InfoComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LayoutComponent,
+        NavComponent,
+        MeComponent,
+        CopyComponent,
+        AboutComponent,
+        ExperienceComponent,
+        CardComponent,
+        InfoComponent
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [UtilsService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
