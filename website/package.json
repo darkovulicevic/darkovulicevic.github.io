@@ -5,7 +5,7 @@
     "ng": "ng",
     "app": "ng build && ng serve --port 4202 --watch",
     "build": "ng build",
-    "buildGit": "ng build --configuration production --base-href https://darkovulicevic.github.io/portfolio/",
+    "buildGit": "ng build --configuration production --base-href https://darkovulicevic.github.io/",
     "hostGit": "ngh --dir=dist/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
