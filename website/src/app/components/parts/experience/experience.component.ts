@@ -74,6 +74,46 @@ export class ExperienceComponent {
                 ]
             },
             {
+                date: 'Dec 2022 – NOW',
+                pos: 'Software Engineer',
+                desc: 'Continued to work on Enreach Contact (formerly Unified Desktop and Web Client) and the QBOARD web app. Responsible for developing new features to enhance functionality and improve user experience. Additionally, performing regular maintenance tasks, including identifying and resolving bugs, to ensure the applications remain robust and reliable.',
+                skills: [
+                    {
+                        name: 'JavaScript'
+                    },
+                    {
+                        name: 'TypeScript'
+                    },
+                    {
+                        name: 'Node.js'
+                    },
+                    {
+                        name: 'Angular'
+                    },
+                    {
+                        name: 'Angular Material'
+                    },
+                    {
+                        name: 'HTML & SCSS'
+                    },
+                    {
+                        name: 'Git'
+                    },
+                    {
+                        name: 'npm'
+                    },
+                    {
+                        name: 'Bitbucket'
+                    },
+                    {
+                        name: 'Jira'
+                    },
+                    {
+                        name: 'Confluence'
+                    }
+                ]
+            },
+            {
                 date: 'Dec 2022 – Jan 2023',
                 pos: 'Software Engineer',
                 desc: 'Contributed to the migration of Enreach Contact (formerly Unified Desktop and Web Client) and the QBOARD web app to a new backend system, Grid, aimed at enhancing scalability and overall performance. The migration improved the backend infrastructure, ensuring better support for both current and future needs.',
