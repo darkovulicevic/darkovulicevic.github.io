@@ -28,6 +28,9 @@ export class ExperienceComponent {
                         name: 'pnpm'
                     },
                     {
+                        name: 'Vite'
+                    },
+                    {
                         name: 'Tailwind CSS'
                     }
                 ]
@@ -35,7 +38,7 @@ export class ExperienceComponent {
             {
                 date: 'Dec 2023 – Now',
                 pos: 'Software Engineer',
-                desc: 'Contributed to the implementation of Drone CI/CD pipelines and currently maintaining and refining build scripts to ensure seamless integration, efficient deployment, and continuous improvement of the development workflow.',
+                desc: 'Contributed to the implementation of Drone CI/CD pipelines across Enreach Contact and QBOARD app, and currently responsible for maintaining and refining build scripts to ensure seamless integration, efficient deployment, and continuous improvement of the development workflow.',
                 skills: [
                     {
                         name: 'Drone'
