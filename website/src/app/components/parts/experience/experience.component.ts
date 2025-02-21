@@ -11,6 +11,31 @@ export class ExperienceComponent {
     public ui = {
         cards: [
             {
+                date: 'Jan 2025 - now',
+                pos: 'Software Engineer',
+                desc: 'Contributed to and currently maintaining Nginx server, overseeing domain name configurations and updates. Played a key role in developing a custom proxy server Squid through Enreach Contact apps, ensuring efficient traffic routing, security, and performance. Continuously optimizing configurations to enhance reliability and support seamless web services.',
+                skills: [
+                    {
+                        name: 'Linux/Unix'
+                    },
+                    {
+                        name: 'Squid'
+                    },
+                    {
+                        name: 'Proxy'
+                    },
+                    {
+                        name: 'Nginx'
+                    },
+                    {
+                        name: 'HTTP/S Protocols'
+                    },
+                    {
+                        name: 'SSL Certificates'
+                    }
+                ]
+            },
+            {
                 date: 'Dec 2024 - now',
                 pos: 'Software Engineer',
                 desc: 'Actively contributing to the Reporting Portal project — a React(v19) web application that offers tools for managing and visualizing reports and statistics.',
