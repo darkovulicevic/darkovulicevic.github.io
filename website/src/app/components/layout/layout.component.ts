@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
+    isLoading: boolean = true;
 
+    constructor() {
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 1000);
+    }
 }

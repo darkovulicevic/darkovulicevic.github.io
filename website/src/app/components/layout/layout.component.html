@@ -1,4 +1,7 @@
-<div class="flex h-screen flex-wrap lg:flex-nowrap">
+<div *ngIf="isLoading" class="flex justify-center items-center h-screen bg-[#0A192F]">
+    <div class="w-12 h-12 border-4 border-[#1e293b] border-t-teal-300 rounded-full animate-spin"></div>
+  </div>
+<div *ngIf="!isLoading" class="flex h-screen flex-wrap lg:flex-nowrap">
     <!-- Left Column (Fixed Top and Bottom, No Scrollable Section) -->
     <div
         class="w-full lg:w-1/2 flex flex-col justify-between h-full items-start bg-[#0A192F] text-slate-200 pt-20 pb-20">
