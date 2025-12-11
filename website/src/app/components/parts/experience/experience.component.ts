@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CardComponent } from '../card/card.component';
 
 @Component({
-    selector: 'app-experience',
-    templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.scss']
+  selector: 'app-experience',
+  standalone: true,
+  imports: [CommonModule, CardComponent],
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
     constructor() { return; }
