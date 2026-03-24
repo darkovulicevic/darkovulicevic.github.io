@@ -3,6 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Page chrome: default white html/body shows on overscroll (macOS/iOS rubber-band). */
+html {
+    background-color: #0a192f;
+    min-height: 100%;
+}
+
+body {
+    background-color: #0a192f;
+    min-height: 100%;
+    margin: 0;
+}
+
+app-root {
+    display: block;
+    min-height: 100%;
+    background-color: #0a192f;
+}
+
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
