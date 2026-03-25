@@ -5,6 +5,9 @@
 }
 
 .this_loading {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -127,6 +130,17 @@
     bottom: -7rem;
     background: rgba(56, 189, 248, 0.18);
     animation-delay: 2.4s;
+}
+
+@media (max-width: 768px) {
+    .this_orb {
+        display: none;
+    }
+
+    .this_left,
+    .this_right {
+        backdrop-filter: none;
+    }
 }
 
 @keyframes drift {

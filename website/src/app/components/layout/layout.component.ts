@@ -13,7 +13,7 @@ import { InfoComponent } from '../parts/info/info.component';
     styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-    private static LOADING_TIMEOUT_MS: number = 900;
+    private static LOADING_TIMEOUT_MS: number = 450;
 
     public isLoading: boolean = true;
     public scrollProgress: number = 0;
