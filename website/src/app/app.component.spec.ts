@@ -1,31 +1,27 @@
 import { TestBed } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-    beforeEach(async () => {
+    beforeEach(async (): Promise<void> => {
         await TestBed.configureTestingModule({
-            declarations: [
+            imports: [
                 AppComponent
-            ],
+            ]
         }).compileComponents();
     });
 
-    it('should create the app', () => {
+    it('should create the app', (): void => {
         const fixture = TestBed.createComponent(AppComponent);
+
         const app = fixture.componentInstance;
         expect(app).toBeTruthy();
     });
 
-    it(`should have as title 'website'`, () => {
+    it('should have title website', (): void => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
-        expect(app.title).toEqual('website');
-    });
 
-    it('should render title', () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        fixture.detectChanges();
-        const compiled = fixture.nativeElement as HTMLElement;
-        expect(compiled.querySelector('.content span')?.textContent).toContain('website app is running!');
+        expect(app.title).toEqual('website');
     });
 });

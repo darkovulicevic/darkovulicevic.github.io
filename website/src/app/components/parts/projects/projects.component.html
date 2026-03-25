@@ -1,0 +1,34 @@
+<div class="this_content this_section_shell">
+    <h2 class="this_section_title">Selected Projects</h2>
+    <p class="this_section_subtitle">
+        Production work delivered across communication platforms, reporting systems, and configuration-driven interfaces - each shaped by architectural clarity, clean code principles, UX precision, and consistent delivery standards.</p>
+
+    <div class="this_grid">
+        <article
+            *ngFor="let project of ui.projects"
+            class="this_card">
+            <div class="this_card_orb"></div>
+            <h3 class="this_card_title">
+                <a
+                    [href]="project.link"
+                    class="this_card_link">
+                    {{ project.name }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="this_card_icon">
+                        <path fill-rule="evenodd"
+                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </h3>
+            <p class="this_card_summary">{{ project.summary }}</p>
+            <p class="this_card_impact">{{ project.impact }}</p>
+            <ul class="this_card_stack">
+                <li *ngFor="let skill of project.stack">
+                    <span class="this_card_pill">
+                        {{ skill }}
+                    </span>
+                </li>
+            </ul>
+        </article>
+    </div>
+</div>

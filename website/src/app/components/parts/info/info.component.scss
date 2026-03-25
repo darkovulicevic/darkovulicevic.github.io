@@ -1,0 +1,15 @@
+.this_content {
+    display: grid;
+    gap: 5rem;
+    padding-bottom: 2rem;
+}
+
+.this_section {
+    scroll-margin-top: 6rem;
+}
+
+@media (min-width: 768px) {
+    .this_content {
+        gap: 6rem;
+    }
+}

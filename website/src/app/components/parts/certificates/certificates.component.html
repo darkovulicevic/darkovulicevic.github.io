@@ -1,0 +1,17 @@
+<div class="this_content this_section_shell">
+    <h2 class="this_section_title">Certificates</h2>
+    <p class="this_section_subtitle">
+        Continuously expanding knowledge across frontend engineering, software architecture, data privacy, and security - applying new skills directly to production projects.</p>
+
+    <ol class="this_list this_cards_list">
+        <app-card
+            *ngFor="let card of ui.cards"
+            [date]="card.date"
+            [pos]="card.pos"
+            [issuer]="card.issuer"
+            [desc]="card.desc"
+            [skills]="card.skills"
+            [fixedDateColumn]="true"
+            [showIssuerIcon]="false"></app-card>
+    </ol>
+</div>

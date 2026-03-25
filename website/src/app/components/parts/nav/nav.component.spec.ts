@@ -6,18 +6,17 @@ describe('NavComponent', () => {
     let component: NavComponent;
     let fixture: ComponentFixture<NavComponent>;
 
-    beforeEach(async () => {
+    beforeEach(async (): Promise<void> => {
         await TestBed.configureTestingModule({
-            declarations: [NavComponent]
-        })
-            .compileComponents();
+            imports: [NavComponent]
+        }).compileComponents();
 
         fixture = TestBed.createComponent(NavComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('should create', (): void => {
         expect(component).toBeTruthy();
     });
 });

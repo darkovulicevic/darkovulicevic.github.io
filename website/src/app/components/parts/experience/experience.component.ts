@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CardComponent } from '../card/card.component';
+
+type TSkill = { name: string };
+type TExperienceCard = { date: string; pos: string; desc: string; skills: TSkill[] };
+type TExperienceUi = { cards: TExperienceCard[] };
 
 @Component({
     selector: 'app-experience',
@@ -12,8 +17,8 @@ import { CardComponent } from '../card/card.component';
 export class ExperienceComponent {
     constructor() { return; }
 
-    public ui = {
-        cards: [
+    public ui: TExperienceUi = {
+        cards: <TExperienceCard[]>[
             {
                 date: 'March 2026 - now',
                 pos: 'Frontend Engineer',
@@ -176,5 +181,5 @@ export class ExperienceComponent {
                 ]
             }
         ]
-    }
+    };
 }

@@ -6,18 +6,17 @@ describe('ExperienceComponent', () => {
     let component: ExperienceComponent;
     let fixture: ComponentFixture<ExperienceComponent>;
 
-    beforeEach(async () => {
+    beforeEach(async (): Promise<void> => {
         await TestBed.configureTestingModule({
-            declarations: [ExperienceComponent]
-        })
-            .compileComponents();
+            imports: [ExperienceComponent]
+        }).compileComponents();
 
         fixture = TestBed.createComponent(ExperienceComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('should create', (): void => {
         expect(component).toBeTruthy();
     });
 });

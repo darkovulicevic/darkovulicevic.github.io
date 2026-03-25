@@ -1,16 +1,22 @@
-<div *ngIf="isLoading" class="flex justify-center items-center h-screen bg-[#0A192F]">
-    <div class="w-12 h-12 border-4 border-[#1e293b] border-t-teal-300 rounded-full animate-spin"></div>
-  </div>
-<div *ngIf="!isLoading" class="flex h-screen flex-wrap lg:flex-nowrap">
-    <!-- Left Column (Fixed Top and Bottom, No Scrollable Section) -->
-    <div
-        class="w-full lg:w-1/2 flex flex-col justify-between h-full items-start bg-[#0A192F] text-slate-200 pt-20 pb-20">
-        <!-- Top Fixed Section -->
-        <app-me class="px-4 sm:px-0 w-full flex justify-center"></app-me>
+<div *ngIf="isLoading" class="this_loading">
+    <div class="this_loading_spinner"></div>
+</div>
 
-        <!-- Bottom Fixed Section with Icons -->
-        <app-copy class="p-4 sm:p-6 w-full flex justify-center"></app-copy>
+<div *ngIf="!isLoading" class="this_layout">
+    <div class="this_background">
+        <div class="this_orb this_orb_one"></div>
+        <div class="this_orb this_orb_two"></div>
+        <div class="this_orb this_orb_three"></div>
     </div>
-    <!-- Right Column (Scrollable) -->
-    <app-info class="w-full lg:w-1/2 bg-[#0A192F] p-4 overflow-y-auto text-left pt-20 pb-20 max-w-full"></app-info>
+
+    <div class="this_progress" [style.transform]="progressTransform()"></div>
+
+    <div class="this_left">
+        <div class="this_left_inner">
+            <app-me class="this_left_top"></app-me>
+            <app-copy class="this_left_bottom"></app-copy>
+        </div>
+    </div>
+
+    <app-info class="this_right"></app-info>
 </div>

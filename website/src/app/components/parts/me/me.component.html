@@ -1,15 +1,46 @@
-<div class="px-4 sm:px-0 w-full flex justify-center">
-    <div class="text-left w-full max-w-[90%] sm:max-w-[45%]">
-        <h1 class="text-3xl sm:text-4xl font-medium tracking-tight text-slate-200 sm:text-5xl">
+<div class="this_content">
+    <div class="this_inner">
+        <a
+            href="https://www.linkedin.com/in/darko-vulicevic/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="this_badge">
+            <div class="this_badge_dot"></div>
+            <div class="this_badge_text">
+                <div class="this_badge_text_value">Currently working as Frontend Engineer at</div>
+                <div class="this_badge_link">
+                    Enreach
+                </div>
+            </div>
+        </a>
+
+        <h1 class="this_title">
             Darko Vulicevic
         </h1>
-        <h2 class="mt-3 text-lg sm:text-xl font-medium tracking-tight text-slate-200">
-            Frontend Engineer
+        <h2 class="this_subtitle">
+            Frontend Engineer crafting premium product experiences
         </h2>
-        <div class="mt-4 text-sm sm:text-base max-w-xs sm:max-w-sm leading-normal text-[#94A3B8]">
-            Creating accessible, pixel-perfect web & desktop apps with seamless
-            user experiences.
+        <p class="this_description">
+            I build performant, accessible and visually polished interfaces in Angular and React with a strong
+            focus on UX quality and maintainable architecture.
+        </p>
+
+        <div class="this_actions">
+            <a
+                href="#projects"
+                (click)="scroll($event, 'projects')"
+                class="this_action this_action_primary">
+                View Projects
+            </a>
+
+            <a
+                href="#experience"
+                (click)="scroll($event, 'experience')"
+                class="this_action this_action_secondary">
+                Explore Experience
+            </a>
         </div>
-        <app-nav></app-nav>
+
+        <app-nav class="this_nav"></app-nav>
     </div>
 </div>

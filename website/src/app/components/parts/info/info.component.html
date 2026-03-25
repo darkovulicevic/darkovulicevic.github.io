@@ -1,3 +1,17 @@
-<app-about id="about"
-    class="about mb-11 scroll-mt-11 xs:mb-5 md:mb-16 lg:mb-16 lg:scroll-mt-16 text-[#94A3B8] flex flex-col justify-center items-center md:min-h-0 md:block"></app-about>
-<app-experience id="experience"></app-experience>
+<div #sectionsContainer class="this_content">
+    <section id="about" class="this_section">
+        <app-about></app-about>
+    </section>
+
+    <section id="experience" class="this_section">
+        <app-experience></app-experience>
+    </section>
+
+    <section id="certificates" class="this_section">
+        <app-certificates></app-certificates>
+    </section>
+
+    <section id="projects" class="this_section">
+        <app-projects></app-projects>
+    </section>
+</div>

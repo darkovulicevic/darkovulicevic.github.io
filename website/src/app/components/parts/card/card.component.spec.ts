@@ -6,18 +6,17 @@ describe('CardComponent', () => {
     let component: CardComponent;
     let fixture: ComponentFixture<CardComponent>;
 
-    beforeEach(async () => {
+    beforeEach(async (): Promise<void> => {
         await TestBed.configureTestingModule({
-            declarations: [CardComponent]
-        })
-            .compileComponents();
+            imports: [CardComponent]
+        }).compileComponents();
 
         fixture = TestBed.createComponent(CardComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('should create', (): void => {
         expect(component).toBeTruthy();
     });
 });

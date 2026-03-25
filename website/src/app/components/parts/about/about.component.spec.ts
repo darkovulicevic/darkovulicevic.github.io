@@ -6,18 +6,17 @@ describe('AboutComponent', () => {
     let component: AboutComponent;
     let fixture: ComponentFixture<AboutComponent>;
 
-    beforeEach(async () => {
+    beforeEach(async (): Promise<void> => {
         await TestBed.configureTestingModule({
-            declarations: [AboutComponent]
-        })
-            .compileComponents();
+            imports: [AboutComponent]
+        }).compileComponents();
 
         fixture = TestBed.createComponent(AboutComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('should create', (): void => {
         expect(component).toBeTruthy();
     });
 });

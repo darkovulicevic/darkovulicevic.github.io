@@ -1,6 +1,14 @@
-<div class="work max-w-[80%] mx-auto px-4">
-    <ol>
-        <app-card *ngFor="let card of ui.cards" date="{{ card.date }}" pos="{{ card.pos }}" desc="{{ card.desc }}"
+<div class="this_content this_section_shell">
+    <h2 class="this_section_title">Experience</h2>
+    <p class="this_section_subtitle">
+        A chronological overview of professional contributions at Enreach Labs spanning frontend engineering, infrastructure ownership, CI/CD pipeline development, component library maintenance, and architectural decision-making. Each entry reflects a consistent track record of delivery, technical growth, and expanding responsibility across products and platforms.
+    </p>
+    <ol class="this_list this_cards_list">
+        <app-card
+            *ngFor="let card of ui.cards"
+            [date]="card.date"
+            [pos]="card.pos"
+            [desc]="card.desc"
             [skills]="card.skills"></app-card>
     </ol>
 </div>
