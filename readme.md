@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a personal portfolio website built using Angular and Tailwind CSS. It showcases my projects, skills, and experiences as a frontend engineer.
+This is a personal portfolio website built using Angular. It showcases my projects, skills, and experiences as a frontend engineer.
 
 ## Features
 
@@ -11,4 +11,3 @@ This is a personal portfolio website built using Angular and Tailwind CSS. It sh
 ## Technologies Used
 
 - **Angular**: A robust framework for building dynamic web applications.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
