@@ -173,8 +173,11 @@
 }
 
 @media (min-width: 900px) {
+    .this_progress {
+        display: none;
+    }
+
     .this_layout {
-        min-height: 100vh;
         height: 100vh;
         flex-wrap: nowrap;
         align-items: stretch;
@@ -182,10 +185,10 @@
     }
 
     .this_left {
-        position: relative;
         flex: 0 0 50%;
         width: 50%;
         height: 100vh;
+        overflow: hidden;
     }
 
     .this_left_inner {
@@ -196,10 +199,9 @@
     .this_right {
         flex: 0 0 50%;
         width: 50%;
-        margin-left: 0;
         height: 100vh;
-        overflow-y: auto;
         overflow-x: hidden;
+        overflow-y: auto;
         overscroll-behavior-y: contain;
         -webkit-overflow-scrolling: touch;
         padding: 5rem 2rem 6rem 2rem;

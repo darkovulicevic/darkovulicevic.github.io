@@ -18,7 +18,10 @@ export class InfoComponent implements AfterViewInit, OnDestroy {
     constructor(private utilsService: UtilsService) { return; }
 
     public ngAfterViewInit(): void {
-        this.utilsService.observeSections(null, ['about', 'experience', 'certificates', 'projects']);
+        const root = typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches
+            ? (document.querySelector('.this_right') as HTMLElement | null)
+            : null;
+        this.utilsService.observeSections(root, ['about', 'experience', 'certificates', 'projects']);
     }
 
     public ngOnDestroy(): void {
