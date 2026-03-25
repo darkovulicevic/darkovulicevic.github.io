@@ -29,7 +29,6 @@
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    overflow-x: hidden;
 }
 
 .this_background {
@@ -173,24 +172,36 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
     .this_layout {
+        min-height: 100vh;
+        height: 100vh;
         flex-wrap: nowrap;
+        align-items: stretch;
+        overflow: hidden;
     }
 
-    .this_left,
-    .this_right {
+    .this_left {
+        position: relative;
+        flex: 0 0 50%;
         width: 50%;
+        height: 100vh;
     }
 
     .this_left_inner {
-        position: sticky;
-        top: 0;
-        min-height: 100vh;
+        min-height: 100%;
         padding: 5rem 0 4rem 0;
     }
 
     .this_right {
+        flex: 0 0 50%;
+        width: 50%;
+        margin-left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
         padding: 5rem 2rem 6rem 2rem;
     }
 }
