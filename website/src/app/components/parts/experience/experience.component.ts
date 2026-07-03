@@ -20,6 +20,18 @@ export class ExperienceComponent {
     public ui: TExperienceUi = {
         cards: <TExperienceCard[]>[
             {
+                date: 'July 2026 - Present',
+                pos: 'Frontend Engineer',
+                desc: 'Currently involved in the process of signing and notarizing native applications for both macOS and Windows platforms.',
+                skills: [
+                    { name: 'Code Signing' },
+                    { name: 'App Notarization' },
+                    { name: 'Apple Developer Portal' },
+                    { name: 'Windows Hardware Dev Center' },
+                    { name: 'Cross-Platform Deployment' }
+                ]
+            },
+            {
                 date: 'March 2026 - now',
                 pos: 'Frontend Engineer',
                 desc: 'Currently involved in the development of two additional React applications focused on configuration management and consolidation of shared entities across multiple applications.',

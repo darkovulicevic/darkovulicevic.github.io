@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
 
 import { AboutComponent } from '../about/about.component';
 import { CertificatesComponent } from '../certificates/certificates.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { UtilsService } from '../../../services/utils.service';
+
+const SECTION_IDS = ['about', 'experience', 'certificates', 'projects'];
 
 @Component({
     selector: 'app-info',
@@ -14,17 +16,29 @@ import { UtilsService } from '../../../services/utils.service';
     templateUrl: './info.component.html',
     styleUrls: ['./info.component.scss']
 })
-export class InfoComponent implements AfterViewInit, OnDestroy {
-    constructor(private utilsService: UtilsService) { return; }
+export class InfoComponent implements AfterViewInit {
+    private readonly desktop = matchMedia('(min-width: 900px)').matches;
 
-    public ngAfterViewInit(): void {
-        const root = typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches
-            ? (document.querySelector('.this_right') as HTMLElement | null)
-            : null;
-        this.utilsService.observeSections(root, ['about', 'experience', 'certificates', 'projects']);
+    constructor(
+        private utilsService: UtilsService,
+        private host: ElementRef<HTMLElement>
+    ) { return; }
+
+    @HostListener('scroll')
+    onScroll(): void {
+        if (this.desktop) this.sync();
     }
 
-    public ngOnDestroy(): void {
-        this.utilsService.disconnectSectionObserver();
+    @HostListener('window:scroll')
+    onWindowScroll(): void {
+        if (!this.desktop) this.sync();
+    }
+
+    ngAfterViewInit(): void {
+        this.sync();
+    }
+
+    private sync(): void {
+        this.utilsService.updateActive(SECTION_IDS, this.desktop ? this.host.nativeElement : null);
     }
 }

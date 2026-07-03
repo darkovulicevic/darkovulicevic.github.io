@@ -1,82 +1,55 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class UtilsService {
-    private readonly _reduced_motion_query: string = '(prefers-reduced-motion: reduce)';
-    private _section_observer?: IntersectionObserver;
-    private _ignore_observer_until: number = 0;
+    private readonly active = new BehaviorSubject('about');
+    readonly activeSection$ = this.active.asObservable();
+    private until = 0;
 
-    private readonly _active_section_subject: BehaviorSubject<string> = new BehaviorSubject<string>('about');
-    public readonly activeSection$ = this._active_section_subject.asObservable();
+    scrollTo(id: string): void {
+        const el = document.getElementById(id);
+        if (!el) return;
 
-    public scrollTo(sectionId: string): void {
-        if (!sectionId) return;
+        this.active.next(id);
+        this.until = Date.now() + 1000;
 
-        const target = document.getElementById(sectionId);
-        if (!target) return;
-
-        const behavior = this._prefers_reduced_motion() ? 'auto' : 'smooth';
-        const right = typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches
-            ? (document.querySelector('.this_right') as HTMLElement | null)
+        const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        const root = matchMedia('(min-width: 900px)').matches
+            ? document.querySelector('.this_right') as HTMLElement | null
             : null;
 
-        this._active_section_subject.next(sectionId);
-        this._ignore_observer_until = performance.now() + 700;
-
-        if (right) {
-            const pr = right.getBoundingClientRect();
-            const tr = target.getBoundingClientRect();
-            const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
-            const top = right.scrollTop + tr.top - pr.top - margin;
-            right.scrollTo({ top: Math.max(0, top), behavior });
-        } else {
-            target.scrollIntoView({ behavior, block: 'start' });
+        if (!root) {
+            el.scrollIntoView({ behavior, block: 'start' });
+            return;
         }
+
+        const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+        const panel = root.getBoundingClientRect();
+        const target = el.getBoundingClientRect();
+        root.scrollTo({ top: Math.max(0, root.scrollTop + target.top - panel.top - margin), behavior });
     }
 
-    public observeSections(container: HTMLElement | null, sectionIds: string[]): void {
-        this.disconnectSectionObserver();
+    updateActive(ids: string[], root: HTMLElement | null): void {
+        if (Date.now() < this.until) return;
 
-        if (sectionIds.length === 0) return;
+        const last = ids.at(-1)!;
+        const atBottom = root
+            ? root.scrollTop + root.clientHeight >= root.scrollHeight - 1
+            : scrollY + innerHeight >= document.documentElement.scrollHeight - 1;
 
-        this._section_observer = new IntersectionObserver(
-            (entries) => {
-                if (performance.now() < this._ignore_observer_until) return;
-
-                const visible_entries = entries
-                    .filter((entry) => entry.isIntersecting)
-                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-                if (visible_entries.length === 0) return;
-
-                const id = (visible_entries[0].target as HTMLElement).id;
-                if (!id) return;
-
-                this._active_section_subject.next(id);
-            },
-            {
-                root: container,
-                threshold: [0.2, 0.35, 0.5, 0.7],
-                rootMargin: '-10% 0px -55% 0px'
+        let id = last;
+        if (!atBottom) {
+            const first = document.getElementById(ids[0]);
+            const marker = (root?.getBoundingClientRect().top ?? 0)
+                + (first ? parseFloat(getComputedStyle(first).scrollMarginTop) || 0 : 0);
+            id = ids[0];
+            for (const sectionId of ids) {
+                const section = document.getElementById(sectionId);
+                if (section && section.getBoundingClientRect().top <= marker) id = sectionId;
             }
-        );
+        }
 
-        sectionIds.forEach((id) => {
-            const section = document.getElementById(id);
-            if (section) this._section_observer?.observe(section);
-        });
-    }
-
-    public disconnectSectionObserver(): void {
-        this._section_observer?.disconnect();
-        this._section_observer = undefined;
-    }
-
-    private _prefers_reduced_motion(): boolean {
-        return typeof window !== 'undefined'
-            && window.matchMedia(this._reduced_motion_query).matches;
+        if (this.active.value !== id) this.active.next(id);
     }
 }
