@@ -20,7 +20,7 @@ export class ExperienceComponent {
     public ui: TExperienceUi = {
         cards: <TExperienceCard[]>[
             {
-                date: 'July 2026 - Present',
+                date: 'July 2026 - now',
                 pos: 'JavaScript Developer',
                 desc: 'Currently involved in the process of signing and notarizing native applications for both macOS and Windows platforms.',
                 skills: [
