@@ -1,15 +1,26 @@
 .this_content {
     display: grid;
-    gap: 5rem;
+    gap: 3.5rem;
     padding-bottom: 2rem;
 }
 
 .this_section {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 5rem;
 }
 
 @media (min-width: 768px) {
     .this_content {
-        gap: 6rem;
+        gap: 5.5rem;
+    }
+
+    .this_section {
+        scroll-margin-top: 6rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .this_content {
+        gap: 6.5rem;
+        padding-bottom: 4rem;
     }
 }

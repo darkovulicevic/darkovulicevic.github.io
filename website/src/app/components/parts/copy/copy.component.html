@@ -6,7 +6,9 @@
                 download
                 title="Darko Vulicevic's CV"
                 aria-label="Download CV"
-                class="this_icon_link">
+                class="this_icon_link"
+                (pointermove)="onIconMove($event)"
+                (pointerleave)="onIconLeave($event)">
                 <i class="this_icon this_icon_pdf"></i>
             </a>
             <a
@@ -14,7 +16,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open GitHub profile"
-                class="this_icon_link">
+                class="this_icon_link"
+                (pointermove)="onIconMove($event)"
+                (pointerleave)="onIconLeave($event)">
                 <i class="this_icon this_icon_github"></i>
             </a>
             <a
@@ -22,7 +26,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open LinkedIn profile"
-                class="this_icon_link">
+                class="this_icon_link"
+                (pointermove)="onIconMove($event)"
+                (pointerleave)="onIconLeave($event)">
                 <i class="this_icon this_icon_linkedin"></i>
             </a>
             <a
@@ -30,7 +36,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open Instagram profile"
-                class="this_icon_link">
+                class="this_icon_link"
+                (pointermove)="onIconMove($event)"
+                (pointerleave)="onIconLeave($event)">
                 <i class="this_icon this_icon_instagram"></i>
             </a>
         </div>

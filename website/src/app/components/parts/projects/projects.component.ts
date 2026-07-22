@@ -39,4 +39,36 @@ export class ProjectsComponent {
             }
         ]
     };
+
+    public onCardMove(event: PointerEvent): void {
+        if (window.innerWidth < 900) {
+            return;
+        }
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+
+        if (event.pointerType === 'touch') {
+            return;
+        }
+
+        const card = event.currentTarget as HTMLElement;
+        const rect = card.getBoundingClientRect();
+        const px = (event.clientX - rect.left) / rect.width;
+        const py = (event.clientY - rect.top) / rect.height;
+
+        card.style.setProperty('--ox', `${px * 100}%`);
+        card.style.setProperty('--oy', `${py * 100}%`);
+        card.style.setProperty('--rx', `${((0.5 - py) * 6).toFixed(2)}deg`);
+        card.style.setProperty('--ry', `${((px - 0.5) * 8).toFixed(2)}deg`);
+    }
+
+    public onCardLeave(event: PointerEvent): void {
+        const card = event.currentTarget as HTMLElement;
+        card.style.setProperty('--ox', '78%');
+        card.style.setProperty('--oy', '8%');
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+    }
 }

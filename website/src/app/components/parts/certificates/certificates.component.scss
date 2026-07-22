@@ -1,11 +1,12 @@
 .this_content {
     margin: 0 auto;
+    width: 100%;
     max-width: 84%;
     padding: 0 1rem;
 }
 
 .this_list {
-    margin-top: 2rem;
+    margin-top: 1.75rem;
 }
 
 .this_section_shell {
@@ -21,5 +22,17 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (min-width: 640px) {
+    .this_list {
+        margin-top: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .this_section_shell {
+        animation: none;
     }
 }

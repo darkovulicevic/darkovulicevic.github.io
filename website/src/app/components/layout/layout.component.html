@@ -3,15 +3,34 @@
 </div>
 
 <div class="this_layout">
-    <div class="this_background">
-        <div class="this_orb this_orb_one"></div>
-        <div class="this_orb this_orb_two"></div>
-        <div class="this_orb this_orb_three"></div>
+    <div
+        class="this_background"
+        [style.--mx]="mx"
+        [style.--my]="my"
+        [style.--spot-x]="spotX"
+        [style.--spot-y]="spotY"
+        [style.--spot-on]="spotOn">
+        <div class="this_spotlight"></div>
+        <div class="this_orb_track" style="--d: 26">
+            <div class="this_orb this_orb_one"></div>
+        </div>
+        <div class="this_orb_track" style="--d: -18">
+            <div class="this_orb this_orb_two"></div>
+        </div>
+        <div class="this_orb_track" style="--d: 14">
+            <div class="this_orb this_orb_three"></div>
+        </div>
     </div>
 
     <div class="this_progress" [style.transform]="progressTransform()"></div>
 
     <div class="this_left">
+        <div class="this_portrait" aria-hidden="true">
+            <div
+                class="this_portrait_img"
+                [style.background-image]="portraitBg"></div>
+            <div class="this_portrait_fog"></div>
+        </div>
         <div class="this_left_inner">
             <app-me class="this_left_top"></app-me>
             <app-copy class="this_left_bottom"></app-copy>

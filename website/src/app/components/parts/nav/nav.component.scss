@@ -1,5 +1,5 @@
 .this_nav {
-    margin-top: 2.5rem;
+    margin-top: 2.25rem;
 }
 
 .this_list {
@@ -10,19 +10,19 @@
 .this_link {
     display: flex;
     align-items: center;
-    padding: 0.625rem 0;
+    padding: 0.55rem 0;
 }
 
 .this_indicator {
-    margin-right: 1rem;
+    margin-right: 0.9rem;
     width: 2rem;
     height: 1px;
     background: #475569;
-    transition: width 300ms ease, background-color 300ms ease;
+    transition: width 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
 }
 
 .this_text {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -34,6 +34,7 @@
 .this_link:focus-visible .this_indicator {
     width: 4rem;
     background: #5eead4;
+    box-shadow: 0 0 12px rgba(94, 234, 212, 0.45);
 }
 
 .this_link:hover .this_text,
@@ -44,6 +45,7 @@
 .this_indicator_active {
     width: 4rem;
     background: #5eead4;
+    box-shadow: 0 0 12px rgba(94, 234, 212, 0.45);
 }
 
 .this_text_active {
@@ -53,6 +55,10 @@
 @media (min-width: 640px) {
     .this_text {
         font-size: 0.875rem;
+    }
+
+    .this_link {
+        padding: 0.625rem 0;
     }
 }
 

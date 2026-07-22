@@ -6,7 +6,9 @@
     <div class="this_grid">
         <article
             *ngFor="let project of ui.projects"
-            class="this_card">
+            class="this_card"
+            (pointermove)="onCardMove($event)"
+            (pointerleave)="onCardLeave($event)">
             <div class="this_card_orb"></div>
             <h3 class="this_card_title">
                 <a

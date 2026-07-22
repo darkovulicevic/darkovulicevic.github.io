@@ -1,5 +1,8 @@
 <li class="this_card">
-    <div class="this_surface">
+    <div
+        class="this_surface"
+        (pointermove)="onMove($event)"
+        (pointerleave)="onLeave($event)">
         <div class="this_hover"></div>
 
         <div class="this_content">

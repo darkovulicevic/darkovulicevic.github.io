@@ -17,28 +17,42 @@ const SECTION_IDS = ['about', 'experience', 'certificates', 'projects'];
     styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements AfterViewInit {
-    private readonly desktop = matchMedia('(min-width: 900px)').matches;
-
     constructor(
         private utilsService: UtilsService,
         private host: ElementRef<HTMLElement>
     ) { return; }
 
     @HostListener('scroll')
-    onScroll(): void {
-        if (this.desktop) this.sync();
+    public onScroll(): void {
+        if (this.isDesktop()) {
+            this.sync();
+        }
     }
 
     @HostListener('window:scroll')
-    onWindowScroll(): void {
-        if (!this.desktop) this.sync();
+    public onWindowScroll(): void {
+        if (!this.isDesktop()) {
+            this.sync();
+        }
     }
 
-    ngAfterViewInit(): void {
+    @HostListener('window:resize')
+    public onResize(): void {
         this.sync();
     }
 
+    public ngAfterViewInit(): void {
+        this.sync();
+    }
+
+    private isDesktop(): boolean {
+        return matchMedia('(min-width: 900px)').matches;
+    }
+
     private sync(): void {
-        this.utilsService.updateActive(SECTION_IDS, this.desktop ? this.host.nativeElement : null);
+        this.utilsService.updateActive(
+            SECTION_IDS,
+            this.isDesktop() ? this.host.nativeElement : null
+        );
     }
 }
