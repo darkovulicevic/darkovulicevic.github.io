@@ -1,64 +1,77 @@
 .this_nav {
-    margin-top: 2.25rem;
+    margin-top: 0;
 }
 
 .this_list {
-    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.1rem 0.15rem;
+    width: auto;
     max-width: 100%;
 }
 
 .this_link {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
-    padding: 0.55rem 0;
+    padding: 0.48rem 0.72rem;
 }
 
 .this_indicator {
-    margin-right: 0.9rem;
-    width: 2rem;
-    height: 1px;
-    background: #475569;
-    transition: width 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+    position: absolute;
+    left: 0;
+    top: 22%;
+    bottom: 22%;
+    width: 2px;
+    height: auto;
+    margin: 0;
+    background: #6aebff;
+    box-shadow: 0 0 8px rgba(106, 235, 255, 0.7);
+    opacity: 0;
+    transform: scaleY(0.4);
+    transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .this_text {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #64748b;
-    transition: color 300ms ease;
+    letter-spacing: 0.16em;
+    color: rgba(197, 208, 228, 0.72);
+    transition: color 160ms ease, text-shadow 160ms ease;
 }
 
 .this_link:hover .this_indicator,
-.this_link:focus-visible .this_indicator {
-    width: 4rem;
-    background: #5eead4;
-    box-shadow: 0 0 12px rgba(94, 234, 212, 0.45);
+.this_link:focus-visible .this_indicator,
+.this_indicator_active {
+    opacity: 1;
+    transform: none;
 }
 
 .this_link:hover .this_text,
-.this_link:focus-visible .this_text {
-    color: #f1f5f9;
-}
-
-.this_indicator_active {
-    width: 4rem;
-    background: #5eead4;
-    box-shadow: 0 0 12px rgba(94, 234, 212, 0.45);
-}
-
+.this_link:focus-visible .this_text,
 .this_text_active {
-    color: #f1f5f9;
+    color: #6aebff;
+    text-shadow: 0 0 14px rgba(106, 235, 255, 0.45);
 }
 
-@media (min-width: 640px) {
-    .this_text {
-        font-size: 0.875rem;
+@media (max-width: 900px) {
+    .this_list {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 0;
     }
 
     .this_link {
-        padding: 0.625rem 0;
+        padding: 0.35rem 0.4rem 0.35rem 0.5rem;
+    }
+
+    .this_text {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
     }
 }
 

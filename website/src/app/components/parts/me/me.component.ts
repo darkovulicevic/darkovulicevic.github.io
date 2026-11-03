@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { NavComponent } from '../nav/nav.component';
 import { UtilsService } from '../../../services/utils.service';
 
 type TChar = { c: string; d: number };
@@ -10,7 +9,7 @@ type TWord = { letters: TChar[] };
 @Component({
     selector: 'app-me',
     standalone: true,
-    imports: [CommonModule, NavComponent],
+    imports: [CommonModule],
     templateUrl: './me.component.html',
     styleUrls: ['./me.component.scss']
 })

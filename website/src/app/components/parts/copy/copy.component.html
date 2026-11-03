@@ -1,52 +1,74 @@
 <div class="this_content">
-    <div class="this_inner">
-        <div class="this_links">
-            <a
-                href="assets/DarkoV.pdf"
-                download
-                title="Darko Vulicevic's CV"
-                aria-label="Download CV"
-                class="this_icon_link"
-                (pointermove)="onIconMove($event)"
-                (pointerleave)="onIconLeave($event)">
-                <i class="this_icon this_icon_pdf"></i>
-            </a>
-            <a
-                href="https://github.com/darkovulicevic"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open GitHub profile"
-                class="this_icon_link"
-                (pointermove)="onIconMove($event)"
-                (pointerleave)="onIconLeave($event)">
-                <i class="this_icon this_icon_github"></i>
-            </a>
-            <a
-                href="https://www.linkedin.com/in/darko-vulicevic/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open LinkedIn profile"
-                class="this_icon_link"
-                (pointermove)="onIconMove($event)"
-                (pointerleave)="onIconLeave($event)">
-                <i class="this_icon this_icon_linkedin"></i>
-            </a>
-            <a
-                href="https://instagram.com/darko.vulicevic"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Instagram profile"
-                class="this_icon_link"
-                (pointermove)="onIconMove($event)"
-                (pointerleave)="onIconLeave($event)">
-                <i class="this_icon this_icon_instagram"></i>
-            </a>
+    <div class="this_grid">
+        <div class="this_brand_col">
+            <a href="#top" class="this_brand">Darko Vulicevic</a>
+            <p class="this_tagline">
+                JavaScript Developer building scalable web and desktop applications with Angular, React, and modern infrastructure.
+            </p>
+            <div class="this_links">
+                <a
+                    href="assets/DarkoV.pdf"
+                    download
+                    title="Darko Vulicevic's CV"
+                    aria-label="Download CV"
+                    class="this_icon_link"
+                    (pointermove)="onIconMove($event)"
+                    (pointerleave)="onIconLeave($event)">
+                    <i class="this_icon this_icon_pdf"></i>
+                </a>
+                <a
+                    href="https://github.com/darkovulicevic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open GitHub profile"
+                    class="this_icon_link"
+                    (pointermove)="onIconMove($event)"
+                    (pointerleave)="onIconLeave($event)">
+                    <i class="this_icon this_icon_github"></i>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/darko-vulicevic/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open LinkedIn profile"
+                    class="this_icon_link"
+                    (pointermove)="onIconMove($event)"
+                    (pointerleave)="onIconLeave($event)">
+                    <i class="this_icon this_icon_linkedin"></i>
+                </a>
+                <a
+                    href="https://instagram.com/darko.vulicevic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Instagram profile"
+                    class="this_icon_link"
+                    (pointermove)="onIconMove($event)"
+                    (pointerleave)="onIconLeave($event)">
+                    <i class="this_icon this_icon_instagram"></i>
+                </a>
+            </div>
         </div>
-        <div class="this_copyright">
-            &copy;&nbsp;<a href="https://www.linkedin.com/in/darko-vulicevic/"
-                target="_blank" rel="noopener noreferrer"
-                class="this_copyright_link">Darko Vulicevic.</a>
-            All rights reserved.
+
+        <nav class="this_col" aria-label="Footer navigation">
+            <p class="this_col_title">Navigate</p>
+            <ul class="this_col_list">
+                <li *ngFor="let item of sections">
+                    <a [href]="'#' + item.id" class="this_col_link" (click)="scrollTo($event, item.id)">{{ item.label }}</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="this_col">
+            <p class="this_col_title">Resources</p>
+            <ul class="this_col_list">
+                <li><a href="assets/DarkoV.pdf" download class="this_col_link">Download CV</a></li>
+                <li><a href="https://github.com/darkovulicevic" target="_blank" rel="noopener noreferrer" class="this_col_link">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/darko-vulicevic/" target="_blank" rel="noopener noreferrer" class="this_col_link">LinkedIn</a></li>
+            </ul>
         </div>
+    </div>
+
+    <div class="this_bottom">
+        <p class="this_copyright">&copy; {{ year }} Darko Vulicevic. All rights reserved.</p>
     </div>
 </div>

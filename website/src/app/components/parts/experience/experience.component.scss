@@ -1,16 +1,7 @@
 .this_content {
-    margin: 0 auto;
     width: 100%;
-    max-width: 84%;
-    padding: 0 1rem;
 }
 
 .this_list {
-    margin-top: 1.75rem;
-}
-
-@media (min-width: 640px) {
-    .this_list {
-        margin-top: 2rem;
-    }
+    border-top: 1px solid rgba(143, 163, 193, 0.16);
 }

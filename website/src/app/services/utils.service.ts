@@ -15,19 +15,7 @@ export class UtilsService {
         this.until = Date.now() + 1000;
 
         const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-        const root = matchMedia('(min-width: 900px)').matches
-            ? document.querySelector('.this_right') as HTMLElement | null
-            : null;
-
-        if (!root) {
-            el.scrollIntoView({ behavior, block: 'start' });
-            return;
-        }
-
-        const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
-        const panel = root.getBoundingClientRect();
-        const target = el.getBoundingClientRect();
-        root.scrollTo({ top: Math.max(0, root.scrollTop + target.top - panel.top - margin), behavior });
+        el.scrollIntoView({ behavior, block: 'start' });
     }
 
     updateActive(ids: string[], root: HTMLElement | null): void {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 
 import { AboutComponent } from '../about/about.component';
 import { CertificatesComponent } from '../certificates/certificates.component';
@@ -17,23 +17,11 @@ const SECTION_IDS = ['about', 'experience', 'certificates', 'projects'];
     styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements AfterViewInit {
-    constructor(
-        private utilsService: UtilsService,
-        private host: ElementRef<HTMLElement>
-    ) { return; }
-
-    @HostListener('scroll')
-    public onScroll(): void {
-        if (this.isDesktop()) {
-            this.sync();
-        }
-    }
+    constructor(private utilsService: UtilsService) { return; }
 
     @HostListener('window:scroll')
     public onWindowScroll(): void {
-        if (!this.isDesktop()) {
-            this.sync();
-        }
+        this.sync();
     }
 
     @HostListener('window:resize')
@@ -45,14 +33,7 @@ export class InfoComponent implements AfterViewInit {
         this.sync();
     }
 
-    private isDesktop(): boolean {
-        return matchMedia('(min-width: 900px)').matches;
-    }
-
     private sync(): void {
-        this.utilsService.updateActive(
-            SECTION_IDS,
-            this.isDesktop() ? this.host.nativeElement : null
-        );
+        this.utilsService.updateActive(SECTION_IDS, null);
     }
 }

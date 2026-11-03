@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { UtilsService } from '../../../services/utils.service';
+
+type TFooterLink = { id: string; label: string };
 
 @Component({
     selector: 'app-copy',
@@ -9,7 +12,20 @@ import { Component } from '@angular/core';
     styleUrls: ['./copy.component.scss']
 })
 export class CopyComponent {
-    constructor() { return; }
+    public year: number = new Date().getFullYear();
+    public sections: TFooterLink[] = [
+        { id: 'about', label: 'About' },
+        { id: 'experience', label: 'Experience' },
+        { id: 'certificates', label: 'Certificates' },
+        { id: 'projects', label: 'Projects' }
+    ];
+
+    constructor(private utilsService: UtilsService) { return; }
+
+    public scrollTo(event: Event, id: string): void {
+        event.preventDefault();
+        this.utilsService.scrollTo(id);
+    }
 
     public onIconMove(event: PointerEvent): void {
         if (window.innerWidth < 900) {

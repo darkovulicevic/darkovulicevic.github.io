@@ -1,17 +1,23 @@
 <div class="this_content this_section_shell">
-    <h2 class="this_section_title">Certificates</h2>
-    <p class="this_section_subtitle">
-        Continuously expanding knowledge across frontend engineering, software architecture, data privacy, and security - applying new skills directly to production projects.</p>
+    <header class="this_section_head">
+        <p class="this_eyebrow">Certificates</p>
+        <h2 class="this_section_title">Continuous learning</h2>
+        <p class="this_section_subtitle">
+            Continuously expanding knowledge across frontend engineering, software architecture, data privacy, and security - applying new skills directly to production projects.
+        </p>
+    </header>
 
-    <ol class="this_list this_cards_list">
-        <app-card
-            *ngFor="let card of ui.cards"
-            [date]="card.date"
-            [pos]="card.pos"
-            [issuer]="card.issuer"
-            [desc]="card.desc"
-            [skills]="card.skills"
-            [fixedDateColumn]="true"
-            [showIssuerIcon]="false"></app-card>
+    <ol class="this_grid">
+        <li *ngFor="let card of ui.cards" class="this_cell">
+            <div class="this_meta">
+                <span class="this_issuer">{{ card.issuer }}</span>
+                <span class="this_date">{{ card.date }}</span>
+            </div>
+            <h3 class="this_title">{{ card.pos }}</h3>
+            <p class="this_description">{{ card.desc }}</p>
+            <ul class="this_skills" aria-label="Topics">
+                <li *ngFor="let skill of card.skills" class="this_skill">{{ skill.name }}</li>
+            </ul>
+        </li>
     </ol>
 </div>

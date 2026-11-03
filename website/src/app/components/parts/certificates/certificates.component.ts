@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CardComponent } from '../card/card.component';
-
 type TSkill = { name: string };
 type TCertificateCard = { date: string; pos: string; issuer: string; desc: string; showIssuerIcon: boolean; skills: TSkill[] };
 type TCertificatesUi = { cards: TCertificateCard[] };
@@ -10,7 +8,7 @@ type TCertificatesUi = { cards: TCertificateCard[] };
 @Component({
     selector: 'app-certificates',
     standalone: true,
-    imports: [CommonModule, CardComponent],
+    imports: [CommonModule],
     templateUrl: './certificates.component.html',
     styleUrls: ['./certificates.component.scss']
 })
@@ -58,6 +56,14 @@ export class CertificatesComponent {
                 desc: 'Structuring and scaling large Angular applications with a focus on web development best practices and frontend architecture.',
                 showIssuerIcon: false,
                 skills: [{ name: 'Angular' }, { name: 'Web Development' }, { name: 'Front-End Development' }]
+            },
+            {
+                date: 'Oct 2026',
+                pos: 'Cyber Security Awareness',
+                issuer: 'SoSafe',
+                desc: 'Completed 13 IT security e-learning modules covering phishing, secure passwords, EU GDPR, and the safe use of artificial intelligence at work.',
+                showIssuerIcon: false,
+                skills: [{ name: 'Cyber Security' }, { name: 'Phishing' }, { name: 'Password Security' }, { name: 'GDPR' }]
             },
         ]
     };

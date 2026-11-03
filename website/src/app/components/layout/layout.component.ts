@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnDestroy } from '@angular/core';
 
 import { MeComponent } from '../parts/me/me.component';
+import { NavComponent } from '../parts/nav/nav.component';
 import { CopyComponent } from '../parts/copy/copy.component';
 import { InfoComponent } from '../parts/info/info.component';
 
 @Component({
     selector: 'app-layout',
     standalone: true,
-    imports: [CommonModule, MeComponent, CopyComponent, InfoComponent],
+    imports: [CommonModule, MeComponent, NavComponent, CopyComponent, InfoComponent],
     templateUrl: './layout.component.html',
     styleUrls: ['./layout.component.scss']
 })
@@ -16,8 +17,13 @@ export class LayoutComponent implements OnDestroy {
     private static LOADING_TIMEOUT_MS: number = 450;
     private static PORTRAIT_SRC: string = 'assets/media/7c2a9f.jpg';
 
+    private static RING: number = 2 * Math.PI * 20;
+
     public isLoading: boolean = true;
     public scrollProgress: number = 0;
+    public showTop: boolean = false;
+    public progressLabel: number = 0;
+    public ringOffset: number = LayoutComponent.RING;
     public mx: number = 0;
     public my: number = 0;
     public spotX: string = '50%';
@@ -33,6 +39,7 @@ export class LayoutComponent implements OnDestroy {
         if (typeof window !== 'undefined') {
             this.reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             this.loadPortrait();
+            this.onWindowScroll();
         }
 
         setTimeout((): void => {
@@ -55,13 +62,26 @@ export class LayoutComponent implements OnDestroy {
 
     @HostListener('window:scroll')
     public onWindowScroll(): void {
-        const root = document.documentElement;
-        const maxScroll = root.scrollHeight - window.innerHeight;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const y = window.scrollY;
+        this.showTop = y > 420;
+
         if (maxScroll <= 0) {
             this.scrollProgress = 0;
+            this.progressLabel = 0;
+            this.ringOffset = LayoutComponent.RING;
             return;
         }
-        this.scrollProgress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+
+        this.scrollProgress = Math.min(1, Math.max(0, y / maxScroll));
+        this.progressLabel = Math.round(this.scrollProgress * 100);
+        this.ringOffset = LayoutComponent.RING * (1 - this.scrollProgress);
+    }
+
+    public scrollTop(event: Event): void {
+        event.preventDefault();
+        const behavior = this.reduceMotion ? 'auto' : 'smooth';
+        window.scrollTo({ top: 0, behavior });
     }
 
     @HostListener('document:pointermove', ['$event'])

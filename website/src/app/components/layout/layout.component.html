@@ -24,18 +24,53 @@
 
     <div class="this_progress" [style.transform]="progressTransform()"></div>
 
-    <div class="this_left">
+    <header class="this_header" [class.this_header_scrolled]="showTop">
+        <div class="this_header_inner">
+            <a class="this_brand" href="#top">Darko Vulicevic</a>
+            <app-nav></app-nav>
+        </div>
+    </header>
+
+    <section id="top" class="this_hero">
         <div class="this_portrait" aria-hidden="true">
             <div
                 class="this_portrait_img"
                 [style.background-image]="portraitBg"></div>
             <div class="this_portrait_fog"></div>
         </div>
-        <div class="this_left_inner">
-            <app-me class="this_left_top"></app-me>
-            <app-copy class="this_left_bottom"></app-copy>
+        <div class="this_hero_inner">
+            <app-me></app-me>
         </div>
-    </div>
+    </section>
 
-    <app-info class="this_right"></app-info>
+    <app-info class="this_sections"></app-info>
+    <app-copy class="this_footer"></app-copy>
+
+    <button
+        type="button"
+        class="this_to_top"
+        [class.this_to_top_visible]="showTop"
+        [attr.aria-label]="'Scroll to top, ' + progressLabel + '% read'"
+        (click)="scrollTop($event)">
+        <svg class="this_to_top_ring" viewBox="0 0 48 48" aria-hidden="true">
+            <defs>
+                <linearGradient id="this_to_top_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6aebff" />
+                    <stop offset="55%" stop-color="#3d9dff" />
+                    <stop offset="100%" stop-color="#2a62e8" />
+                </linearGradient>
+            </defs>
+            <circle class="this_to_top_track" cx="24" cy="24" r="20"></circle>
+            <circle
+                class="this_to_top_fill"
+                cx="24"
+                cy="24"
+                r="20"
+                [style.stroke-dashoffset]="ringOffset"></circle>
+        </svg>
+        <span class="this_to_top_core">
+            <i class="this_to_top_icon" aria-hidden="true"></i>
+            <span class="this_to_top_pct">{{ progressLabel }}</span>
+        </span>
+    </button>
 </div>
