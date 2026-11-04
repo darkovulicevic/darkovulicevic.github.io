@@ -12,8 +12,6 @@ type TSkill = { name: string };
 })
 export class CardComponent {
     @Input() public date: string = '';
-    @Input() public pos: string = '';
-    @Input() public issuer: string = 'Enreach Labs';
     @Input() public desc: string = '';
     @Input() public skills: TSkill[] = [];
 

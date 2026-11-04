@@ -1,7 +1,7 @@
 <div class="this_content this_section_shell">
     <header class="this_section_head">
         <p class="this_eyebrow">Experience</p>
-        <h2 class="this_section_title">Over five years at Enreach Labs</h2>
+        <h2 class="this_section_title">Experience at Enreach Labs</h2>
         <p class="this_section_subtitle">
             A chronological overview of professional contributions spanning frontend engineering, infrastructure ownership, CI/CD pipeline development, component library maintenance, and architectural decision-making.
         </p>
@@ -11,7 +11,6 @@
         <app-card
             *ngFor="let card of ui.cards"
             [date]="card.date"
-            [pos]="card.pos"
             [desc]="card.desc"
             [skills]="card.skills"></app-card>
     </ol>

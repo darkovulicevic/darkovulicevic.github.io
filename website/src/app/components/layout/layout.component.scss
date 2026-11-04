@@ -108,14 +108,20 @@
 }
 
 .this_brand {
-    background: linear-gradient(115deg, #6aebff 0%, #3d9dff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 1.05rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.2;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    line-height: 0;
+}
+
+.this_logo {
+    display: block;
+    width: calc(2.75rem * 542 / 88);
+    height: 2.75rem;
+    background: url('/assets/brand/logo-lockup.png') no-repeat center / 100% 100%;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .this_hero,

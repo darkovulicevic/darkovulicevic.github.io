@@ -1,9 +1,17 @@
 <div class="this_content">
     <div class="this_grid">
         <div class="this_brand_col">
-            <a href="#top" class="this_brand">Darko Vulicevic</a>
+            <a
+                href="#top"
+                class="this_brand"
+                aria-label="Darko Vulicevic"
+                draggable="false"
+                (contextmenu)="$event.preventDefault()"
+                (dragstart)="$event.preventDefault()">
+                <span class="this_logo" aria-hidden="true"></span>
+            </a>
             <p class="this_tagline">
-                JavaScript Developer building scalable web and desktop applications with Angular, React, and modern infrastructure.
+                Scalable web and desktop applications with Angular, React, and modern infrastructure.
             </p>
             <div class="this_links">
                 <a

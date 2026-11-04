@@ -26,7 +26,15 @@
 
     <header class="this_header" [class.this_header_scrolled]="showTop">
         <div class="this_header_inner">
-            <a class="this_brand" href="#top">Darko Vulicevic</a>
+            <a
+                class="this_brand"
+                href="#top"
+                aria-label="Darko Vulicevic"
+                draggable="false"
+                (contextmenu)="$event.preventDefault()"
+                (dragstart)="$event.preventDefault()">
+                <span class="this_logo" aria-hidden="true"></span>
+            </a>
             <app-nav></app-nav>
         </div>
     </header>

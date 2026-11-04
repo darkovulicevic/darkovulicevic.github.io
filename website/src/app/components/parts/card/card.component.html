@@ -1,10 +1,6 @@
 <li class="this_card">
     <span class="this_date">{{ date }}</span>
     <div class="this_copy">
-        <h3 class="this_title">
-            {{ pos }}
-            <span class="this_issuer">{{ issuer }}</span>
-        </h3>
         <p class="this_description">{{ desc }}</p>
         <ul class="this_skills" aria-label="Technologies used">
             <li *ngFor="let skill of skills" class="this_skill">{{ skill.name }}</li>

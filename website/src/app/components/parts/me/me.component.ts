@@ -27,7 +27,7 @@ export class MeComponent {
     constructor(private utilsService: UtilsService) {
         this.ui = {
             title: this.takeWords('Darko Vulicevic'),
-            subtitle: this.takeWords('JavaScript Developer driven by craft, consistency, and technical excellence'),
+            subtitle: this.takeWords('Driven by craft, consistency, and technical excellence'),
             description: this.takeWords('I build performant, accessible, and visually refined interfaces across Angular and React - with a strong emphasis on architectural integrity, clean code, and sustainable product delivery')
         };
 
